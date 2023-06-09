@@ -32,6 +32,10 @@ spec:
         {{ $key }}: {{ $value | quote }}
         {{- end }}
     spec:
+    {{- with .Values.extraVolumeClaimTemplates }}
+      volumeClaimTemplates:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
     {{- with .Values.global.hostAliases }}
       hostAliases:
         {{- toYaml . | nindent 8 }}

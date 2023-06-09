@@ -93,6 +93,8 @@ extraVolumeMounts: []
   #   mountPath: /usr/share/extras
   #   readOnly: true
 
+extraVolumeClaimTemplates: []
+
 extraInitContainers: []
 
 # Add extra sidecar containers to deployment pod
